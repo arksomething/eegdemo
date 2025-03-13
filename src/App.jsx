@@ -16,7 +16,7 @@ function EmailLogger() {
     const { data, error } = await supabase
       .from('emails') // TODO: Replace with your table name
       .insert([{ email }])
-    
+    alert("email success!")
     if (error) {
       console.error('Error inserting email:', error)
     } else {
